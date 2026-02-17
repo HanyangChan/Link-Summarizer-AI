@@ -1,0 +1,65 @@
+{
+    "extName": {
+        "message": "AIリンク要約機"
+    },
+    "extDescription": {
+        "message": "リンクにカーソルを合わせると、GeminiまたはGroqを使用してAI要約を表示します。"
+    },
+    "optionsTitle": {
+        "message": "AIリンク要約機の設定"
+    },
+    "aiProvider": {
+        "message": "AIプロバイダー"
+    },
+    "geminiGroup": {
+        "message": "Gemini設定"
+    },
+    "geminiApiKey": {
+        "message": "Gemini APIキー"
+    },
+    "geminiPlaceholder": {
+        "message": "Gemini APIキーを入力してください"
+    },
+    "geminiHelp": {
+        "message": "Google AI Studioから無料キーを取得してください"
+    },
+    "groqGroup": {
+        "message": "Groq設定"
+    },
+    "groqApiKey": {
+        "message": "Groq APIキー"
+    },
+    "groqPlaceholder": {
+        "message": "Groq APIキーを入力してください"
+    },
+    "groqHelp": {
+        "message": "Groq Cloudから無料キーを取得してください"
+    },
+    "saveSettings": {
+        "message": "設定を保存"
+    },
+    "settingsSaved": {
+        "message": "設定が正常に保存されました！"
+    },
+    "missingKey": {
+        "message": "APIキーを入力してください。"
+    },
+    "loading": {
+        "message": "要約中..."
+    },
+    "analyzing": {
+        "message": "ページの内容を分析しています..."
+    },
+    "waitingPreview": {
+        "message": "プレビューを待機中..."
+    },
+    "failed": {
+        "message": "失敗"
+    },
+    "error": {
+        "message": "エラー"
+    },
+    "providerHelp": {
+        "message": "Groqはリンクプレビューにおいて非常に高速です。"
+    }
+}

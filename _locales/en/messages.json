@@ -1,0 +1,65 @@
+{
+    "extName": {
+        "message": "AI Link Summarizer"
+    },
+    "extDescription": {
+        "message": "Hover over links to see an AI-powered summary using Gemini or Groq."
+    },
+    "optionsTitle": {
+        "message": "AI Link Summarizer Settings"
+    },
+    "aiProvider": {
+        "message": "AI Provider"
+    },
+    "geminiGroup": {
+        "message": "Gemini Settings"
+    },
+    "geminiApiKey": {
+        "message": "Gemini API Key"
+    },
+    "geminiPlaceholder": {
+        "message": "Enter your Gemini API key"
+    },
+    "geminiHelp": {
+        "message": "Get a free key from Google AI Studio"
+    },
+    "groqGroup": {
+        "message": "Groq Settings"
+    },
+    "groqApiKey": {
+        "message": "Groq API Key"
+    },
+    "groqPlaceholder": {
+        "message": "Enter your Groq API key"
+    },
+    "groqHelp": {
+        "message": "Get a free key from Groq Cloud"
+    },
+    "saveSettings": {
+        "message": "Save Settings"
+    },
+    "settingsSaved": {
+        "message": "Settings saved correctly!"
+    },
+    "missingKey": {
+        "message": "Please enter an API key."
+    },
+    "loading": {
+        "message": "Loading..."
+    },
+    "analyzing": {
+        "message": "Analyzing the page contents for you..."
+    },
+    "waitingPreview": {
+        "message": "Waiting for preview..."
+    },
+    "failed": {
+        "message": "Failed"
+    },
+    "error": {
+        "message": "Error"
+    },
+    "providerHelp": {
+        "message": "Groq is significantly faster for link previews."
+    }
+}

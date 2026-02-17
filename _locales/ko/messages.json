@@ -1,0 +1,65 @@
+{
+    "extName": {
+        "message": "AI 링크 요약기"
+    },
+    "extDescription": {
+        "message": "링크 위에 마우스를 올리면 Gemini 또는 Groq를 사용해 AI 요약을 보여줍니다."
+    },
+    "optionsTitle": {
+        "message": "AI 링크 요약기 설정"
+    },
+    "aiProvider": {
+        "message": "AI 제공자"
+    },
+    "geminiGroup": {
+        "message": "Gemini 설정"
+    },
+    "geminiApiKey": {
+        "message": "Gemini API 키"
+    },
+    "geminiPlaceholder": {
+        "message": "Gemini API 키를 입력하세요"
+    },
+    "geminiHelp": {
+        "message": "Google AI Studio에서 무료 키를 발급받으세요"
+    },
+    "groqGroup": {
+        "message": "Groq 설정"
+    },
+    "groqApiKey": {
+        "message": "Groq API 키"
+    },
+    "groqPlaceholder": {
+        "message": "Groq API 키를 입력하세요"
+    },
+    "groqHelp": {
+        "message": "Groq Cloud에서 무료 키를 발급받으세요"
+    },
+    "saveSettings": {
+        "message": "설정 저장"
+    },
+    "settingsSaved": {
+        "message": "설정이 성공적으로 저장되었습니다!"
+    },
+    "missingKey": {
+        "message": "API 키를 입력해 주세요."
+    },
+    "loading": {
+        "message": "요약 중..."
+    },
+    "analyzing": {
+        "message": "페이지 내용을 분석하고 있습니다..."
+    },
+    "waitingPreview": {
+        "message": "미리보기를 기다리는 중..."
+    },
+    "failed": {
+        "message": "실패"
+    },
+    "error": {
+        "message": "오류"
+    },
+    "providerHelp": {
+        "message": "Groq은 링크 미리보기에 훨씬 더 빠릅니다."
+    }
+}
