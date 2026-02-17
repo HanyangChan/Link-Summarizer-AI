@@ -57,6 +57,24 @@ AI를 활용하여 링크 위에 마우스를 올렸을 때 해당 페이지의 
 
 ---
 
+### 🔒 보안 및 개인정보 보호 (Security)
+사용자의 API 키는 외부 서버로 절대 전송되지 않으며, 오직 사용자의 브라우저 로컬 저장소(`chrome.storage.local`)에만 안전하게 저장됩니다.
+
+```javascript
+// options.js - 사용자의 API 키는 브라우저 내부 로컬 스토리지에만 저장됩니다.
+chrome.storage.local.set({
+    aiProvider,
+    geminiApiKey,
+    groqApiKey
+}, () => {
+    showStatus(chrome.i18n.getMessage('settingsSaved'), 'lightgreen');
+});
+```
+- **Local Storage Only**: API 키는 오직 구글/Groq 서버와 통신할 때만 사용되며, 개발자를 포함한 그 누구에게도 전송되지 않습니다.
+- **Open Source**: 모든 소스코드가 공개되어 있어 데이터 처리 과정을 직접 검증하실 수 있습니다.
+
+---
+
 ## 🚀 설치 및 사용법
 
 1. **파일 다운로드**: 이 프로젝트 폴더를 로컬 PC에 저장합니다.
