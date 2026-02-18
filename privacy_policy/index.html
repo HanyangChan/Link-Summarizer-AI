@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보처리방침 - Link Summarizer AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border);
+        }
+
+        header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .header-content h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 8px 0;
+            letter-spacing: -0.025em;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 8px;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 16px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        footer {
+            margin-top: 64px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Language visibility */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 24px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1 id="main-title">개인정보처리방침</h1>
+                <p class="last-updated" id="last-updated-text">최종 수정일: 2026년 2월 18일</p>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="setLanguage('ko')">한국어</button>
+                <button class="lang-btn" onclick="setLanguage('en')">English</button>
+                <button class="lang-btn" onclick="setLanguage('ja')">日本語</button>
+            </div>
+        </header>
+
+        <!-- KOREAN CONTENT -->
+        <div id="content-ko" class="lang-content active">
+            <section>
+                <p><strong>Link Summarizer AI</strong>(이하 '본 서비스')는 사용자의 개인정보를 소중히 여기며, 관련 법령을 준수하기 위해 최선을 다하고 있습니다. 본
+                    방침은 서비스 이용 과정에서 수집되는 정보와 처리 방법을 설명합니다.</p>
+            </section>
+
+            <section>
+                <h2>1. 수집하는 정보의 항목</h2>
+                <p>본 서비스는 원활한 요약 기능을 제공하기 위해 다음과 같은 정보를 일시적으로 처리할 수 있습니다:</p>
+                <ul>
+                    <li><strong>URL 데이터:</strong> 사용자가 요약을 요청한 웹 페이지의 주소</li>
+                    <li><strong>웹 페이지 콘텐츠:</strong> 요약을 위해 추출된 해당 웹 페이지의 텍스트 데이터</li>
+                    <li><strong>API 설정 정보:</strong> 사용자가 직접 입력한 Gemini 또는 Groq API 키 (로컬 스토리지에 저장됨)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. 개인정보의 수집 및 이용 목적</h2>
+                <p>수집된 정보는 오직 다음의 목적으로만 이용됩니다:</p>
+                <ul>
+                    <li>사용자가 요청한 웹 페이지 내용의 분석 및 요약 생성</li>
+                    <li>서비스 품질 개선 및 오류 진단</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. 제3자 서비스 제공</h2>
+                <p>본 서비스는 요약 기능을 수행하기 위해 사용자가 선택한 AI 모델 제공사로 데이터를 전송합니다:</p>
+                <div class="highlight-box">
+                    <p><strong>데이터 전송처:</strong> Google Gemini API 또는 Groq API</p>
+                    <p><strong>전송 항목:</strong> 웹 페이지 텍스트 콘텐츠</p>
+                    <p>전송된 데이터는 각 공급업체의 개인정보처리방침에 따라 처리됩니다.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. 개인정보의 보유 및 파기</h2>
+                <p>본 서비스는 서버에 사용자의 데이터를 저장하지 않습니다. 모든 요약 요청은 API 호출을 통해 즉시 처리되며, 처리 완료 후 전송된 데이터는 본 서비스 측에서 보유하지 않습니다.
+                </p>
+                <p>API 키와 설정 정보는 사용자의 브라우저 내 '로컬 스토리지'에만 저장되며, 사용자가 확장 프로그램을 삭제하거나 데이터를 직접 삭제할 때까지 유지됩니다.</p>
+            </section>
+
+            <section>
+                <h2>5. 사용자의 권리</h2>
+                <p>사용자는 언제든지 확장 프로그램 설정 페이지에서 API 키를 수정하거나 삭제할 수 있으며, 확장 프로그램을 브라우저에서 삭제함으로써 모든 서비스 이용 및 데이터 처리를 중단할 수
+                    있습니다.</p>
+            </section>
+
+            <section>
+                <h2>6. 문의처</h2>
+                <p>개인정보 처리와 관련된 문의사항이 있으시면 아래의 채널을 통해 연락해 주시기 바랍니다.</p>
+                <ul>
+                    <li>이메일: [관리자 이메일을 입력하세요]</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- ENGLISH CONTENT -->
+        <div id="content-en" class="lang-content">
+            <section>
+                <p><strong>Link Summarizer AI</strong> ("the Service") values your privacy and is committed to complying
+                    with relevant laws and regulations. This policy explains what information is collected and how it is
+                    processed during your use of the Service.</p>
+            </section>
+
+            <section>
+                <h2>1. Information We Collect</h2>
+                <p>The Service may temporarily process the following information to provide summarization features:</p>
+                <ul>
+                    <li><strong>URL Data:</strong> The address of the web page you request to summarize.</li>
+                    <li><strong>Web Page Content:</strong> Extracted text content from the requested web page.</li>
+                    <li><strong>API Settings:</strong> Gemini or Groq API keys provided by the user (stored locally in
+                        your browser).</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Purpose of Collection and Use</h2>
+                <p>The collected information is used solely for the following purposes:</p>
+                <ul>
+                    <li>Analyzing web page content and generating summaries as requested by the user.</li>
+                    <li>Improving service quality and diagnosing errors.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Third-party Service Providers</h2>
+                <p>To perform summarization, the Service transmits data to the AI model provider selected by the user:
+                </p>
+                <div class="highlight-box">
+                    <p><strong>Recipient:</strong> Google Gemini API or Groq API</p>
+                    <p><strong>Transmitted Items:</strong> Web page text content</p>
+                    <p>Transmitted data is processed according to each provider's privacy policy.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. Data Retention and Destruction</h2>
+                <p>The Service does not store user data on any server. All summarization requests are processed
+                    immediately via API calls, and the Service does not retain transmitted data once processing is
+                    complete.</p>
+                <p>API keys and configuration settings are stored only in the user's browser (local storage) and remain
+                    until the user deletes them or uninstalls the extension.</p>
+            </section>
+
+            <section>
+                <h2>5. User Rights</h2>
+                <p>Users can modify or delete their API keys at any time on the extension's options page. You can stop
+                    all data processing by uninstalling the extension from your browser.</p>
+            </section>
+
+            <section>
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions regarding privacy, please contact us at:</p>
+                <ul>
+                    <li>Email: [Enter Admin Email]</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- JAPANESE CONTENT -->
+        <div id="content-ja" class="lang-content">
+            <section>
+                <p><strong>Link Summarizer
+                        AI</strong>（以下「本サービス」）は、ユーザーの個人情報を大切に考え、関連法規を遵守するために最善を尽くしています。本方針は、サービス利用過程で収集される情報とその処理方法について説明します。
+                </p>
+            </section>
+
+            <section>
+                <h2>1. 収集する情報の項目</h2>
+                <p>本サービスは、円滑な要約機能を提供するために、以下の情報を一時的に処理する場合があります：</p>
+                <ul>
+                    <li><strong>URLデータ：</strong> ユーザーが要約をリクエストしたウェブページのアドレス</li>
+                    <li><strong>ウェブページコンテンツ：</strong> 要約のために抽出された該当ウェブページのテキストデータ</li>
+                    <li><strong>API設定情報：</strong> ユーザーが直接入力したGeminiまたはGroqのAPIキー（ローカルストレージに保存）</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. 個人情報の収集および利用目的</h2>
+                <p>収集された情報は、以下の目的のみに使用されます：</p>
+                <ul>
+                    <li>ユーザーがリクエストしたウェブページ内容の分析および要約の生成</li>
+                    <li>サービス品質の向上およびエラー診断</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. 第三者サービスへの提供</h2>
+                <p>本サービスは、要約機能を実行するために、ユーザーが選択したAIモデル提供元にデータを送信します：</p>
+                <div class="highlight-box">
+                    <p><strong>データ送信先：</strong> Google Gemini API または Groq API</p>
+                    <p><strong>送信項目：</strong> ウェブページのテキストコンテンツ</p>
+                    <p>送信されたデータは、各プロバイダーのプライバシーポリシーに従って処理されます。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>4. 個人情報の保有および破棄</h2>
+                <p>本サービスは、サーバーにユーザーのデータを保存しません。すべての要約要求はAPI呼び出しを通じて即座に処理され、処理完了後に送信されたデータは本サービス側で保持されません。</p>
+                <p>APIキーと設定情報は、ユーザーのブラウザ内の「ローカルストレージ」にのみ保存され、ユーザーが拡張機能を削除するかデータを直接削除するまで保持されます。</p>
+            </section>
+
+            <section>
+                <h2>5. ユーザーの権利</h2>
+                <p>ユーザーはいつでも拡張機能の設定ページでAPIキーを修正または削除でき、ブラウザから拡張機能を削除することで、すべてのデータ処理を停止できます。</p>
+            </section>
+
+            <section>
+                <h2>6. お問い合わせ</h2>
+                <p>個人情報処理に関するお問い合わせは、以下のチャネルを通じてご連絡ください。</p>
+                <ul>
+                    <li>メール： [管理者メールアドレスを入力してください]</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            &copy; 2026 Link Summarizer AI. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            ko: {
+                title: '개인정보처리방침',
+                updated: '최종 수정일: 2026년 2월 18일'
+            },
+            en: {
+                title: 'Privacy Policy',
+                updated: 'Last Updated: February 18, 2026'
+            },
+            ja: {
+                title: 'プライバシーポリシー',
+                updated: '最終更新日: 2026年2월18일'
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.innerText.toLowerCase().includes(lang === 'ko' ? '한국어' : lang === 'en' ? 'english' : '日本')) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Specific active class logic for buttons since text might not always match perfectly
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons[0].classList.toggle('active', lang === 'ko');
+            buttons[1].classList.toggle('active', lang === 'en');
+            buttons[2].classList.toggle('active', lang === 'ja');
+
+            // Update content
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`content-${lang}`).classList.add('active');
+
+            // Update Header
+            document.getElementById('main-title').innerText = translations[lang].title;
+            document.getElementById('last-updated-text').innerText = translations[lang].updated;
+            document.title = `${translations[lang].title} - Link Summarizer AI`;
+        }
+    </script>
+</body>
+
+</html>

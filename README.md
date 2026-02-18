@@ -70,6 +70,7 @@ chrome.storage.local.set({
     showStatus(chrome.i18n.getMessage('settingsSaved'), 'lightgreen');
 });
 ```
+- [Privacy Policy (개인정보처리방침)](https://4c6ca37d.test05165416.pages.dev/)
 - **Local Storage Only**: API 키는 오직 구글/Groq 서버와 통신할 때만 사용되며, 개발자를 포함한 그 누구에게도 전송되지 않습니다.
 - **Open Source**: 모든 소스코드가 공개되어 있어 데이터 처리 과정을 직접 검증하실 수 있습니다.
 
