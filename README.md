@@ -1,3 +1,7 @@
+
+- 크롬 웹스토어 :
+https://chromewebstore.google.com/detail/olihmmkhioddfjeomnnhfnbeolfnppgb?utm_source=item-share-cb
+
 AI를 활용하여 링크 위에 마우스를 올렸을 때 해당 페이지의 핵심 내용을 2~3문장으로 요약해주는 크롬 익스텐션입니다. **Gemini 1.5 Flash**와 **Groq (Llama 3)** 모델을 지원하여 빠르고 안정적인 요약을 제공합니다.
 
 ### ⌛ 압도적인 시간 절약 (Efficiency)
